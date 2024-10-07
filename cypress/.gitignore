@@ -1,6 +1,0 @@
-node_modules/
-/.env
-/logs/
-*.tmp
-node_modules/
-cypress.env.json
