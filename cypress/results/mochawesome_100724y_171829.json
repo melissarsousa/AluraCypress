@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-07T20:18:25.652Z",
+    "end": "2024-10-07T20:18:29.798Z",
+    "duration": 4146,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "37a024e8-3eda-463f-ac80-f2e1d2b6736a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cadastro-falha.cy.js",
+      "file": "cypress\\e2e\\cadastro-falha.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0b4dfa7b-2986-4c2b-897e-cb8c3fd23be5",
+          "title": "Página de Cadastro com dados inválidos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastro sem email ",
+              "fullTitle": "Página de Cadastro com dados inválidos Cadastro sem email ",
+              "timedOut": null,
+              "duration": 2099,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://adopet-frontend-cypress.vercel.app/');\ncy.get('[data-test=\"register-button\"]').click();\n//cy.get('[data-test=\"input-name\"]').type('Bsinha Bsa');\n//cy.get('[data-test=\"input-email\"]').type('bsabsa@email.com');\n//cy.get('[data-test=\"input-password\"]').type('Bsabsinha7');\n// cy.get('[data-test=\"input-confirm-password\"]').type('Bsabsinha7');\ncy.get('[data-test=\"submit-button\"]').click();\ncy.contains('É necessário informar um endereço de email').should('be.visible');\ncy.contains('Crie uma senha').should('be.visible');\ncy.contains('Repita a senha criada acima').should('be.visible');",
+              "err": {},
+              "uuid": "12b9e452-0f54-41a4-a2ba-13f93e03d694",
+              "parentUUID": "0b4dfa7b-2986-4c2b-897e-cb8c3fd23be5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "12b9e452-0f54-41a4-a2ba-13f93e03d694"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2099,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
